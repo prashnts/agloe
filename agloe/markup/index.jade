@@ -11,12 +11,12 @@ html(lang='en')
     link(rel='canonical', href='https://agloe.noop.pw')
     link(rel='stylesheet', type='text/css', href='css/libraries.css')
     link(rel='stylesheet', type='text/css', href='css/app.css')
-  body
-    h1 Agloe
-    p Sem Long Rescue
-    div#map
+    script.
+      window.brunch = window.brunch || {};
+      window.brunch.server = 'localhost';
 
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9Ti4hOSGki7z2Rkc-Ic8C94q31cTm70&callback=initMap', async, defer)
+  body
+    div#map
 
     script(type='text/javascript', src='js/libraries.js')
     script(type='text/javascript', src='js/app.js')
@@ -24,3 +24,4 @@ html(lang='en')
       var app = require('app');
       var initMap = app.initMap;
 
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9Ti4hOSGki7z2Rkc-Ic8C94q31cTm70&callback=initMap', async, defer)

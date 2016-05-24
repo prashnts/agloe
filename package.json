@@ -21,6 +21,7 @@
     "coffeelint-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
     "gmaps": "^0.4.24",
+    "html2canvas": "^0.5.0-beta4",
     "jaded-brunch": "^2.3.0",
     "javascript-brunch": "^2.0.0",
     "jeet": "^6.1.2",
