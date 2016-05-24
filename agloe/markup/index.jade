@@ -16,12 +16,16 @@ html(lang='en')
       window.brunch.server = 'localhost';
 
   body
+    select(name='map-type')
+      option(value='', selected, disabled) Map Type
+      option(value='traffic') Traffic
+      option(value='road') Road
+      option(value='default') Default
     div#map
 
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9Ti4hOSGki7z2Rkc-Ic8C94q31cTm70')
     script(type='text/javascript', src='js/libraries.js')
     script(type='text/javascript', src='js/app.js')
     script.
-      var app = require('app');
-      var initMap = app.initMap;
+      var app = require('app').init();
 
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9Ti4hOSGki7z2Rkc-Ic8C94q31cTm70&callback=initMap', async, defer)

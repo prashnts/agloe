@@ -1,24 +1,37 @@
 # Agloe
-
-{mapStyle} = require './mapstyle'
-
-html2canvas = require 'html2canvas'
+$ = require 'jquery'
+{mapStyle, mapInvisible} = require './mapstyle'
 
 App =
   init: ->
     console.log "init success"
+    @initEvents()
 
-  initMap: ->
-    map = new google.maps.Map(
+  initEvents: ->
+    ($ 'select[name="map-type"]').on 'change', (e) =>
+      mode = ($ e.target).val()
+
+      switch mode
+        when 'traffic' then @drawTraffic()
+        when 'road' then @drawVisible()
+        when 'default' then @drawMap()
+
+  drawVisible: ->
+    @drawMap(mapStyle)
+
+  drawTraffic: ->
+    @drawMap(mapInvisible)
+    trafficLayer = new google.maps.TrafficLayer()
+    trafficLayer.setMap @map
+
+  drawMap: (style) ->
+    @map = new google.maps.Map(
       document.getElementById('map'),
         center:
-          lat: 28.6139
-          lng: 77.2090
-        zoom: 15
-        styles: mapStyle
+          lat: 28.6289143
+          lng: 77.2205107
+        zoom: 14
+        styles: style
     )
-    html2canvas '#map'
-    # trafficLayer = new google.maps.TrafficLayer()
-    # trafficLayer.setMap(map)
 
 module.exports = App
