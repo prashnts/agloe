@@ -1,0 +1,12 @@
+/* TEAM */
+  Developer: Parul Sethi
+  GitHub: @parulsethi
+  Website: https://agloe.noop.pw
+  Source: https://github.com/parulsethi/agloe
+  From: New Delhi, India
+
+/* THANKS */
+  ...
+
+/* SITE */
+  ...
