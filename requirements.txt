@@ -1,4 +1,6 @@
 beautifulsoup4==4.4.1
+dask==0.9.0
+decorator==4.0.9
 falcon==1.0.0
 gevent==1.1.1
 greenlet==0.4.9
@@ -7,13 +9,19 @@ hug==2.1.2
 logutils==0.3.3
 Mako==1.0.4
 MarkupSafe==0.23
+networkx==1.11
+numpy==1.11.0
 pecan==1.0.5
+pecan-mount==0.0.2
+Pillow==3.2.0
 pystache==0.5.4
 python-mimeparse==1.5.2
 requests==2.10.0
+scikit-image==0.12.3
 selenium==2.53.2
 six==1.10.0
 static==1.1.1
+toolz==0.7.4
 waitress==0.9.0
 WebOb==1.6.1
 WebTest==2.0.21
