@@ -1,0 +1,22 @@
+// Agloe
+
+doctype html
+html(lang='en')
+  head
+    title Agloe
+    include ./partials/head.jade
+
+    meta(property='og:title', content='Agloe')
+    meta(property='og:url', content='https://agloe.noop.pw')
+    link(rel='canonical', href='https://agloe.noop.pw')
+    link(rel='stylesheet', type='text/css', href='css/libraries.css')
+    link(rel='stylesheet', type='text/css', href='css/app.css')
+  body
+    h1 Agloe
+    p Sem Long Rescue
+
+    script(type='text/javascript', src='js/libraries.js')
+    script(type='text/javascript', src='js/app.js')
+    script.
+      var app = require('app');
+      app.init();
