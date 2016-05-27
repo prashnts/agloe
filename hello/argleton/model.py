@@ -1,6 +1,7 @@
 # Hello
 # -*- coding: utf-8 -*-
 import io
+import skimage.io
 
 from pyquery.pyquery import JQueryTranslator
 from selenium import webdriver
@@ -50,7 +51,8 @@ class MapShots(object):
     return True
 
   def _get_dom_shot_(self):
-    return io.BytesIO(self._wd.get_screenshot_as_png())
+    stream = io.BytesIO(self._wd.get_screenshot_as_png())
+    return skimage.io.imread(stream)
 
   def _get_map_(self, maptype):
     if not self._p_state_ == maptype:
@@ -71,3 +73,6 @@ class MapShots(object):
   def map(self):
     return self._get_map_('default')
 
+
+class GrowNetwork(object):
+  pass
