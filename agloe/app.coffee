@@ -24,6 +24,8 @@ App =
     trafficLayer = new google.maps.TrafficLayer()
     trafficLayer.setMap @map
 
+  tilesLoaded: -> ($ '#epoch').text Date.now()
+
   drawMap: (style) ->
     @map = new google.maps.Map(
       document.getElementById('map'),
@@ -33,5 +35,6 @@ App =
         zoom: 14
         styles: style
     )
+    @map.addListener 'tilesloaded', @tilesLoaded
 
 module.exports = App
